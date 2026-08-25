@@ -1,6 +1,7 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { MongooseModule } from '@nestjs/mongoose';
+import { VehiclesModule } from './vehicles/vehicles.module';
 import { HealthController } from './health.controller';
 
 @Module({
@@ -13,6 +14,7 @@ import { HealthController } from './health.controller';
         autoIndex: true,
       }),
     }),
+    VehiclesModule,
   ],
   controllers: [HealthController],
 })
