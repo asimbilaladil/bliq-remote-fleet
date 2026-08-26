@@ -6,11 +6,13 @@ import { VehiclesService } from './vehicles.service';
 import { VehicleRepository } from './repositories/vehicle.repository';
 import { MongoVehicleRepository } from './repositories/mongo-vehicle.repository';
 import { OperatorsModule } from '../operators/operators.module';
+import { AssignmentEventsModule } from '../history/assignment-events.module';
 
 @Module({
   imports: [
     MongooseModule.forFeature([{ name: Vehicle.name, schema: VehicleSchema }]),
     OperatorsModule,
+    AssignmentEventsModule,
   ],
   controllers: [VehiclesController],
   providers: [

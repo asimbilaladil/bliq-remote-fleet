@@ -3,6 +3,7 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
 import { MongooseModule } from '@nestjs/mongoose';
 import { VehiclesModule } from './vehicles/vehicles.module';
 import { OperatorsModule } from './operators/operators.module';
+import { AssignmentEventsModule } from './history/assignment-events.module';
 import { HealthController } from './health.controller';
 
 @Module({
@@ -17,6 +18,7 @@ import { HealthController } from './health.controller';
     }),
     VehiclesModule,
     OperatorsModule,
+    AssignmentEventsModule,
   ],
   controllers: [HealthController],
 })
